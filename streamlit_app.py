@@ -70,15 +70,12 @@ def insert_row_snowflake(new_fruit):
 
     
 #second fruit input box
-try
-    
-
 try:
   add_my_fruit = streamlit.text_input('What fruit would you like to add?')
   if not add_my_fruit:
     streamlit.error("Please enter a fruit to add to the database.")
   else:
-    back_from_function = insert_row_snowflake(add_my_fruit)
+    insert_row_snowflake(add_my_fruit)
 
 except URLError as e:
   streamlit.error()
